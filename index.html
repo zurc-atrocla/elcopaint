@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Draw Something!</title>
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body>
+        <div id="painter">
+            <div id="flex-wrapper">
+                <div id="brush-settings-container">
+                    <input class="cursor-pointer" type="range" min="1" max="49" value="9" step="2" id="brush-size-input" style="width:7em">
+                    <span id="brush-size-display" style="margin-right: 20px; margin-left: 20px; min-width: 9px; min-height: 9px;"></span>
+
+                    <div class="divider"></div>
+                    
+                    <img class="mode-button selected no-highlight" id="brush-button" src="./img/brush.jpg" height="30px">
+                    <img class="mode-button no-highlight" id="fill-button" src="./img/bucket.jpg" height="30px">
+                    <img class="mode-button no-highlight" id="erase-button" src="./img/eraser.jpg" height="30px">
+                    
+                    <div class="divider"></div>
+                    
+                    <input class="cursor-pointer" type="color" id="brush-color-input">
+                    
+                    <div class="divider"></div>
+
+                    <input type="number" class="canvas-dimension" min="1" id="dimension-x">
+                    <span class="no-highlight">by</span>
+                    <input type="number" class="canvas-dimension" min="1" id="dimension-y">
+                    <button class="action-button cursor-pointer no-highlight" id="reset-dimensions-button">reset dimensions</button>
+
+                    <div class="divider"></div>
+
+                    <button class="action-button cursor-pointer no-highlight" id="undo-button">undo [alt+u]</button>
+                    <button class="action-button cursor-pointer no-highlight" id="redo-button">redo [alt+r]</button>
+                    <button class="action-button cursor-pointer no-highlight" id="clear-button">clear</button>
+
+                    <div class="divider"></div>
+
+                    <input type="file" accept="image/*" id="image-import">
+                    <button class="action-button cursor-pointer no-highlight" id="image-import-button">import</button>
+
+                    <div class="divider"></div>
+
+                    <button class="action-button cursor-pointer no-highlight" id="download-button">download</button>
+                </div>
+            </div>
+
+            <div id="canvas-wrapper">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.hotkeys/0.2.0/jquery.hotkeys.js" integrity="sha512-+JuEJRNDDVpR25SDO0BazogPEvaVIPQ70RYpdqv0onPS1sPi88CQ9k1vJzFpFQaF2FU9unTaaexUQVmmKY9HOA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="./js/main.js"></script>
+        <script src="./js/drawingUtils.inc.js"></script>
+    </body>
+</html>

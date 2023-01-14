@@ -1,0 +1,128 @@
+body {
+    margin: 0px;
+    padding: 10px;
+    /* prevent unwanted zooming on double-tap from iPad / iPhone / IOS devices
+     * running Safari */
+    touch-action: manipulation;
+    font-family: Arial;
+}
+
+#canvas {
+    display: block;
+    border: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+}
+
+#brush-settings-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1em;
+
+    /*width: 200%;*/
+    height: 70px;
+}
+
+#flex-wrapper {
+    overflow-x: scroll;
+    margin: 0px;
+    padding: 0px
+}
+
+#flex-wrapper::-webkit-scrollbar {
+    height: 0px;
+}
+
+#brush-size-display {
+    padding: 0px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+#brush-color-input {
+    min-width: 5em;
+}
+
+.selected {
+    transform: scale(1.2);
+    box-shadow: 0.15em 0.15em 0.2em #222222;
+}
+
+.mode-button {
+    cursor: pointer;
+    transform-origin: center;
+    touch-action: manipulation;
+}
+
+.mode-button:hover {
+    transform: scale(1.2);
+}
+
+.action-button {
+    min-width: 7em !important;
+    border-radius: 0.5em;
+    background: darkgray;
+    color: black;
+    border: 1px solid black;
+}
+
+.action-button:hover {
+    background: lightgray;
+}
+
+.action-button:disabled {
+    color: darkgray;
+    background: #DDDDDD;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* prevent highlighting of text / images (lots of browser specific tags here) */
+/* this is the StackOverflow approved method :) */
+.no-highlight {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.no-highlight:focus {
+    outline: none !important;
+}
+
+.divider {
+    background: #555555;
+    min-width: 1px;
+    min-height: 49px;
+}
+
+#image-import {
+    min-width: 15em;
+    border-radius: 0.5em;
+    background: darkgray;
+    border: 1px solid black;
+}
+
+#image-import:hover {
+    background: lightgray;
+}
+
+.canvas-dimension {
+    width: 3em;
+}
+
+#canvas-holder {
+    overflow: scroll;
+}
+
+#canvas-holder::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
